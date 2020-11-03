@@ -21,6 +21,8 @@
   <!-- Custom styles for this template -->
   <link href="css/landing-page.min.css" rel="stylesheet">
 
+  <link rel="stylesheet" href="css/upload.css">
+
 </head>
 
 <body>
@@ -29,7 +31,6 @@
   <nav class="navbar navbar-light bg-light static-top">
     <div class="container">
       <a class="navbar-brand" href="#">Start Bootstrap</a>
-      <a class="btn btn-primary" href="#">Sign In</a>
     </div>
   </nav>
 
@@ -42,55 +43,50 @@
           <h1 class="mb-5">Build a landing page for your business or project and generate more leads!</h1>
         </div>
         <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
-          <form>
-            <div class="form-row">
-              <div class="col-12 col-md-9 mb-2 mb-md-0">
-                <input type="email" class="form-control form-control-lg" placeholder="Enter your email...">
-              </div>
-              <div class="col-12 col-md-3">
-                <button type="submit" class="btn btn-block btn-lg btn-primary">Sign up!</button>
-              </div>
-            </div>
-          </form>
         </div>
       </div>
     </div>
   </header>
 
-  <!-- Icons Grid -->
-  <section class="features-icons bg-light text-center">
+   <!-- Icons Grid -->
+   <section class="features-icons bg-light text-center">
     <div class="container">
       <div class="row">
-        <div class="col-lg-4">
-          <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
-            <div class="features-icons-icon d-flex">
-              <i class="icon-screen-desktop m-auto text-primary"></i>
+      <div class="container">
+
+      <script type="text/javascript" src="./js/upload.js"></script>
+
+      <script class="jsbin" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+
+
+        <div class="file-upload" >
+        <form action="upload.php" method="post" enctype="multipart/form-data">
+
+          <button id="btAggiungi" class="file-upload-btn-add" type="button" onclick="$('.file-upload-input').trigger( 'click' )">Aggiungi Spartito</button>
+          <div class="image-upload-wrap">
+            <input class="file-upload-input" type='file' onchange="readURL(this);" accept=".mid,.mxl" multiple name="fileToUpload[]" />
+            <div class="drag-text">
+              <h3>Drag and drop a file or select add Image</h3>
             </div>
-            <h3>Fully Responsive</h3>
-            <p class="lead mb-0">This theme will look great on any device, no matter the size!</p>
           </div>
-        </div>
-        <div class="col-lg-4">
-          <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
-            <div class="features-icons-icon d-flex">
-              <i class="icon-layers m-auto text-primary"></i>
+          <div class="file-upload-content">
+            <img  src="https://lh3.googleusercontent.com/proxy/rFpvawxkAllko5Vbm640J4G8r2-hjJ2pgQAtZK6ZNTxGxL47coahmWKe39tyKJlZQvH4bm9g8Ea-FvKKGr9vVyTRlRTDC6cOVv-U" alt="your image" width="100" height="100"/>
+            <div class="image-title-wrap">
+              <button type="button" onclick="removeUpload()" class="remove-image">1 <span class="file-title">Uploaded Image</span></button>
+              <button type="button" onclick="removeUpload()" class="remove-image">2 <span class="file-title2">Uploaded Image</span></button>
             </div>
-            <h3>Bootstrap 4 Ready</h3>
-            <p class="lead mb-0">Featuring the latest build of the new Bootstrap 4 framework!</p>
-          </div>
-        </div>
-        <div class="col-lg-4">
-          <div class="features-icons-item mx-auto mb-0 mb-lg-3">
-            <div class="features-icons-icon d-flex">
-              <i class="icon-check m-auto text-primary"></i>
-            </div>
-            <h3>Easy to Use</h3>
-            <p class="lead mb-0">Ready to use with your own content, or customize the source files!</p>
-          </div>
-        </div>
+            <button class="file-upload-btn" type="button" onclick="removeUpload()">Elimina Spartiti</button>
+         </div>
+         <input type="submit" value="Upload Image" name="submit">
+        </form>
+      </div>
+
+      
+      </div>
       </div>
     </div>
   </section>
+
 
   <!-- Image Showcases -->
   <section class="showcase">
@@ -150,25 +146,36 @@
     </div>
   </section>
 
-  <!-- Call to Action -->
-  <section class="call-to-action text-white text-center">
-    <div class="overlay"></div>
+   <!-- Icons Grid -->
+   <section class="features-icons bg-light text-center">
     <div class="container">
       <div class="row">
-        <div class="col-xl-9 mx-auto">
-          <h2 class="mb-4">Ready to get started? Sign up now!</h2>
-        </div>
-        <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
-          <form>
-            <div class="form-row">
-              <div class="col-12 col-md-9 mb-2 mb-md-0">
-                <input type="email" class="form-control form-control-lg" placeholder="Enter your email...">
-              </div>
-              <div class="col-12 col-md-3">
-                <button type="submit" class="btn btn-block btn-lg btn-primary">Sign up!</button>
-              </div>
+        <div class="col-lg-4">
+          <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
+            <div class="features-icons-icon d-flex">
+              <i class="icon-trophy m-auto text-primary"></i>
             </div>
-          </form>
+            <h3>Fully Responsive</h3>
+            <p class="lead mb-0">This theme will look great on any device, no matter the size!</p>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
+            <div class="features-icons-icon d-flex">
+              <i class="icon-layers m-auto text-primary"></i>
+            </div>
+            <h3>Bootstrap 4 Ready</h3>
+            <p class="lead mb-0">Featuring the latest build of the new Bootstrap 4 framework!</p>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="features-icons-item mx-auto mb-0 mb-lg-3">
+            <div class="features-icons-icon d-flex">
+              <i class="icon-check m-auto text-primary"></i>
+            </div>
+            <h3>Easy to Use</h3>
+            <p class="lead mb-0">Ready to use with your own content, or customize the source files!</p>
+          </div>
         </div>
       </div>
     </div>
