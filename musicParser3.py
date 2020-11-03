@@ -16,6 +16,7 @@ songParseList=[]
 def generateCSV():
 
     with open('datasetParsingProva.csv', 'w') as csvfile:
+
         filewriter = csv.writer(csvfile, delimiter=',',
                                 quotechar='|', quoting=csv.QUOTE_MINIMAL)
         filewriter.writerow(['N','SongName', 'SongString'])
@@ -244,6 +245,7 @@ def generateString(songName,folderName):
 
 
 
+
     # s2=s2.replace("p*p","p")
     # s2=s2.replace("p*p*p","p")
     # s2=s2.replace("p*p*p*p","p")
@@ -257,6 +259,7 @@ def generateString(songName,folderName):
     songParseList.append(SongParse(songName,s2))
 
     print("Done.")
+
 
 
 

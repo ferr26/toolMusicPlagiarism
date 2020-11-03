@@ -18,6 +18,11 @@ h6 {
   font-weight: 700;
 }
 
+.container {
+  max-width: 750px;
+  padding: 15px;
+}
+
 header.masthead {
   position: relative;
   background-color: #343a40;
@@ -124,3 +129,5 @@ footer.footer {
   padding-top: 4rem;
   padding-bottom: 4rem;
 }
+
+
