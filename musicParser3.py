@@ -15,14 +15,14 @@ songParseList=[]
 
 def generateCSV():
 
-    with open('datasetParsingProva.csv', 'w') as csvfile:
+    with open('datasetCouple.csv', 'w') as csvfile:
 
-        filewriter = csv.writer(csvfile, delimiter=',',
+        filewriter = csv.writer(csvfile, delimiter=';',
                                 quotechar='|', quoting=csv.QUOTE_MINIMAL)
         filewriter.writerow(['N','SongName', 'SongString'])
         i=1
         for song in songParseList:
-            filewriter.writerow([i,song.songName,song.songString])
+            filewriter.writerow([song.songString])
             i=i+1
 
 def folderRead(folderName):
