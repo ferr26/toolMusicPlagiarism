@@ -30,7 +30,7 @@
   <!-- Navigation -->
   <nav class="navbar navbar-light bg-light static-top">
     <div class="container">
-      <a class="navbar-brand" href="#">Start Bootstrap</a>
+      <a class="navbar-brand" href="#">Music Plagiarism</a>
     </div>
   </nav>
 
@@ -119,26 +119,25 @@
   <!-- Testimonials -->
   <section class="testimonials text-center bg-light">
     <div class="container">
-      <h2 class="mb-5">What people are saying...</h2>
+      <h2 class="mb-5">Chi siamo</h2>
       <div class="row">
         <div class="col-lg-4">
           <div class="testimonial-item mx-auto mb-5 mb-lg-0">
-            <img class="img-fluid rounded-circle mb-3" src="img/testimonials-1.jpg" alt="">
-            <h5>Margaret E.</h5>
+            <img class="img-fluid rounded-circle mb-3" src="img/alfonso.jpg" alt="">
+            <h5>Alfonso Del Gaizo</h5>
+            <i class="icon-trophy m-auto text-primary"></i>
             <p class="font-weight-light mb-0">"This is fantastic! Thanks so much guys!"</p>
           </div>
         </div>
         <div class="col-lg-4">
           <div class="testimonial-item mx-auto mb-5 mb-lg-0">
-            <img class="img-fluid rounded-circle mb-3" src="img/testimonials-2.jpg" alt="">
-            <h5>Fred S.</h5>
-            <p class="font-weight-light mb-0">"Bootstrap is amazing. I've been using it to create lots of super nice landing pages."</p>
+            <img class="img-fluid rounded-circle mb-3" src="img/logoInformatica.png" alt="">
           </div>
         </div>
         <div class="col-lg-4">
           <div class="testimonial-item mx-auto mb-5 mb-lg-0">
-            <img class="img-fluid rounded-circle mb-3" src="img/testimonials-3.jpg" alt="">
-            <h5>Sarah W.</h5>
+            <img class="img-fluid rounded-circle mb-3" src="img/rosa1.jpg" alt="">
+            <h5>Rosa Ferraioli</h5>
             <p class="font-weight-light mb-0">"Thanks so much for making these free resources available to us!"</p>
           </div>
         </div>
@@ -209,7 +208,7 @@
           <ul class="list-inline mb-0">
             <li class="list-inline-item mr-3">
               <a href="#">
-                <i class="fab fa-facebook fa-2x fa-fw"></i>
+                <i class="fa fa-git-square"></i>
               </a>
             </li>
             <li class="list-inline-item mr-3">
