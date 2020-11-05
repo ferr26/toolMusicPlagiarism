@@ -93,7 +93,7 @@
     <div class="container-fluid p-0">
       <div class="row no-gutters">
 
-        <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('img/bg-showcase-1.jpg');"></div>
+        <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('img/piano.jpg');"></div>
         <div class="col-lg-6 order-lg-1 my-auto showcase-text">
           <h2>Nuova Rappresentazione</h2>
           <p class="lead mb-0">Conversione della musica in un nuovo formato.</p>
@@ -102,7 +102,7 @@
         </div>
       </div>
       <div class="row no-gutters">
-        <div class="col-lg-6 text-white showcase-img" style="background-image: url('img/bg-showcase-2.jpg');"></div>
+        <div class="col-lg-6 text-white showcase-img" style="background-image: url('img/code.jpg');"></div>
         <div class="col-lg-6 my-auto showcase-text">
           <h2>Correlazione</h2>
           <p class="lead mb-0">Tecniche di Text Similarity. </p>
@@ -111,7 +111,7 @@
         </div>
       </div>
       <div class="row no-gutters">
-        <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('img/bg-showcase-3.jpg');"></div>
+        <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('img/cluster.jpg');"></div>
         <div class="col-lg-6 order-lg-1 my-auto showcase-text">
           <h2>Machine Learning</h2>
           <p class="lead mb-0">Embedding della nuova Rappresentazione</p>
