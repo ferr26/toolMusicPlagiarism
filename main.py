@@ -29,10 +29,17 @@ stringa = stringa.replace("'", "")
 cosinedistance = mt.coseno(stringa,stringa1)
 print(cosinedistance)
 
-if(cosinedistance <= 0.7):
+if(cosinedistance >0.7):
+        print("TRUE")
+
+if(cosinedistance < 0.45):
+        print("FALSE")
+
+
+if(cosinedistance >= 0.45 and cosinedistance <=0.7):
         plagio=sp.spectralClustering()
         if (plagio==True):
-           print('TRUE')
+           print('TRUEC')
         if (plagio==False):
-           print('FALSE')
+           print('FALSEC')
 
