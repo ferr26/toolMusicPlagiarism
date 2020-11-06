@@ -1,3 +1,31 @@
+<?php
+
+$length=count($_FILES["fileToUpload"]["name"]);
+
+for ($i =0; $i <= $length-1; $i++) {
+    $nomefile=$_FILES ['fileToUpload']['name'][$i];
+    move_uploaded_file ($_FILES ['fileToUpload']['tmp_name'][$i], 'Parts/'.$nomefile);
+  }
+
+$comando='python musicParser3.py';
+exec($comando, $out, $status);
+
+
+$comando2='python main.py';
+exec($comando2, $out2, $status2);
+
+$cosinedistance = (float)$out2[0];
+
+$cosinedistance = $cosinedistance * 100;
+$cosinedistance = (int)$cosinedistance;
+
+$plagio = $out2[1];
+
+
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -40,19 +68,69 @@
           <div class="card-body p-0">
             <!-- Nested Row within Card Body -->
             <div class="row">
+            <?php
+             if($plagio == "TRUE"){
+
+              echo("<div class=\"col-lg-6 d-none d-lg-block\" style=\"background-color:#77dd77;\">");
+             }
+             if($plagio == "TRUEC"){
+
+              echo(" <div class=\"col-lg-6 d-none d-lg-block\" style=\"background-color:#fdfd96;\">");
+             }
+             if($plagio == "FALSEC"){
+
+              echo("<div class=\"col-lg-6 d-none d-lg-block\" style=\"background-color:#ff6961;\">");
+             }
+             if($plagio == "FALSE"){
+
+              echo("<div class=\"col-lg-6 d-none d-lg-block\" style=\"background-color:#ff6961;\">");
+             }
+          ?>
               <!-- <div class="col-lg-6 d-none d-lg-block" style="background-color:#77dd77;">-->
                <!--<div class="col-lg-6 d-none d-lg-block" style="background-color:#ff6961;"> -->
-              <div class="col-lg-6 d-none d-lg-block" style="background-color:#fdfd96;">
+             <!-- <div class="col-lg-6 d-none d-lg-block" style="background-color:#fdfd96;">-->
               </div>
               <div class="col-lg-6">
                 <div class="p-5">
-                  <div class="text-center">
-                    <h1 class="h1 text-gray-900 mb-4">PLAGIO</h1>
-                  </div>
-                  <div class="text-center">
-                    <h1 class="h1">90 (%)</h1>
-                  </div>
-                </div>
+                <?php 
+
+                  if($plagio == "TRUE"){
+
+                    echo("<div class=\"text-center\">
+                            <h1 class=\"h1 text-gray-900 mb-4\">PLAGIO</h1>
+                         </div>
+                         <div class=\"text-center\">
+                            <h1 class=\"h1\">$cosinedistance (%)</h1>
+                         </div>");
+              
+                  }
+                  if($plagio == "TRUEC"){
+                    echo("<div class=\"text-center\">
+                             <h1 class=\"h1 text-gray-900 mb-4\">PLAGIO</h1>
+                         </div>
+                        <div class=\"text-center\">
+                           <h1 class=\"h1\">$cosinedistance (%)</h1>
+                        </div>");
+                  }
+                  if($plagio == "FALSEC"){
+                    echo("<div class=\"text-center\">
+                             <h1 class=\"h1 text-gray-900 mb-4\">NO PLAGIO</h1>
+                         </div>
+                        <div class=\"text-center\">
+                             <h1 class=\"h1\">$cosinedistance (%)</h1>
+                        </div>");
+                  }
+                  if($plagio == "FALSE"){
+                    echo("<div class=\"text-center\">
+                             <h1 class=\"h1 text-gray-900 mb-4\">NO PLAGIO</h1>
+                         </div>
+                        <div class=\"text-center\">
+                          <h1 class=\"h1\">$cosinedistance (%)</h1>
+                        </div>");
+                  }
+
+                  ?>
+                 </div>
               </div>
             </div>
           </div>

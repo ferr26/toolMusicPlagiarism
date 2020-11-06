@@ -60,7 +60,7 @@
 
 
         <div class="file-upload" >
-        <form action="upload1.php" method="post" enctype="multipart/form-data">
+        <form action="upload2.php" method="post" enctype="multipart/form-data">
 
           <button id="btAggiungi" class="file-upload-btn-add" type="button" onclick="$('.file-upload-input').trigger( 'click' )">Carica Spartiti</button>
           <div class="image-upload-wrap">
