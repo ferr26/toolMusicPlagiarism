@@ -16,6 +16,7 @@
   <!-- Custom fonts for this template -->
   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
   <link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet" type="text/css">
+
   <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
 
   <!-- Custom styles for this template -->
@@ -59,7 +60,7 @@
       <script class="jsbin" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 
 
-        <div class="file-upload" >
+        <div class="file-upload  bg-light" >
         <form action="upload2.php" method="post" enctype="multipart/form-data">
 
           <button id="btAggiungi" class="file-upload-btn-add" type="button" onclick="$('.file-upload-input').trigger( 'click' )">Carica Spartiti</button>
@@ -70,14 +71,29 @@
             </div>
           </div>
           <div class="file-upload-content">
-            <img  src="https://lh3.googleusercontent.com/proxy/rFpvawxkAllko5Vbm640J4G8r2-hjJ2pgQAtZK6ZNTxGxL47coahmWKe39tyKJlZQvH4bm9g8Ea-FvKKGr9vVyTRlRTDC6cOVv-U" alt="your image" width="100" height="100"/>
+            <img  src="./img/verify.png" alt="your image" width="100" height="100"/>
+            <p>
             <div class="image-title-wrap">
-              <button type="button" onclick="removeUpload()" class="remove-image">1 <span class="file-title">Uploaded Image</span></button>
-              <button type="button" onclick="removeUpload()" class="remove-image">2 <span class="file-title2">Uploaded Image</span></button>
+
+            <div class="card text-white" style="background-color:	#008080;">
+              <div class="card-body"> 
+               <i class="fa fa-music"></i>
+               <span class="file-title">Success card </span></div>
+            </div>
+            <p>
+
+            <div class="card text-white" style="background-color:	#008080;">
+            <div class="card-body"> 
+              <i class="fa fa-music"></i>  
+              <span class="file-title2">Success card </span>
+            </div>
+            </div>
+      
             </div>
             <button class="file-upload-btn" type="button" onclick="removeUpload()">Elimina Spartiti</button>
+            <button class="file-upload-btn" style="background-color:#7FCF90;" type="submit" value="VERIFICA" name="submit">VERIFICA</button>
+
          </div>
-         <input type="submit" value="VERIFICA" name="submit">
         </form>
       </div>
 
